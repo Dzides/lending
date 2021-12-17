@@ -1,0 +1,147 @@
+$bg: #FFFFFF;
+$bg-medium: #B3BAC5;
+$bg-dark: #E5E5E5;
+$orange-title: #FAAD13;
+$title: #183B56;
+$text: #5A7184;
+$blue: #1565D8;
+$light-blue: #E6F0FC;
+$grey: #959EAD;
+$black: #000000;
+$brd-card: #ECEEF2;
+
+%opsans-400 {
+    font-family: "OpenSans-Regular", sans-serif;
+    font-weight: 400;
+}
+
+// @extend %opsans-400;
+
+%opsans-600 {
+    font-family: "OpenSans-SemiBold", sans-serif;
+    font-weight: 600;
+}
+
+// @extend %opsans-600;
+
+%opsans-700 {
+    font-family: "OpenSans-Bold", sans-serif;
+    font-weight: 700;
+}
+
+// @extend %opsans-700;
+
+%roboto-500 {
+    font-family: "Roboto-Medium", sans-serif;
+    font-weight: 500;
+}
+
+// @extend %roboto-500;
+
+%rcbold-700 {
+    font-family: "RobotoCondensed-Bold", sans-serif;
+    font-weight: 700;
+}
+
+// @extend %rcbold-700;
+
+
+@function max($numbers...) {
+    @return m#{a}x(#{$numbers});
+}
+
+@function min($numbers...) {
+    @return m#{i}n(#{$numbers});
+}
+
+%invisible {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    font-size: 0;
+    z-index: 1;
+}
+
+@mixin min-text ($line) {
+    display: -webkit-box;
+    -webkit-line-clamp: ($line);
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+// @include min-text (2)
+
+%minimal-text {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+%minimal-text-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+%minimal-text-1 {
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+%checkbox-hidden {
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    position: absolute;
+}
+
+@mixin hover-supported {
+    @media not all and (pointer: coarse) {
+        &:hover {
+            @content;
+        }
+    }
+}
+
+// @include hover-supported() {
+//     background-color: white;
+// }
+
+@mixin desktop {
+    @media (min-width: (992px)) {
+        @content;
+    }
+}
+
+// @include desktop {
+//     &:hover {
+//         border-color: $bg;
+//     }
+// }
+
+@mixin r($width) {
+    @media only screen and (max-width: #{$width}px) {
+        @content;
+    }
+}
+
+//   @include r(1200)
+
+
+// @include r(992)
+
+
+// @include r(768)
+
+
+// @include r(576)

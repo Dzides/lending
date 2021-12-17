@@ -1,0 +1,35 @@
+body {
+    @extend %opsans-400;
+    font-size: 16px;
+    line-height: 1.4;
+    background-color: $bg;
+    color: $title;
+}
+
+.container {
+    max-width: 1170px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+.logo {
+    width: 90px;
+    height: 28px;
+
+    @include r(768) {
+        position: relative;
+        z-index: 4;
+    }
+}
+

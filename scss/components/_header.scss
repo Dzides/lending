@@ -1,0 +1,243 @@
+.header {
+
+  &__top {
+    background-color: $bg-dark;
+  }
+
+  &__nav {
+    padding: 45px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__hero {
+    display: flex;
+    padding: 50px 0 0;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 60px;
+  }
+
+  &__title {
+    @extend %rcbold-700;
+    font-size: 48px;
+    line-height: 1.25;
+    letter-spacing: 0.2px;
+    max-width: 450px;
+    margin-bottom: 48px;
+
+
+    &-color {
+      display: block;
+      color: $orange-title;
+    }
+  }
+
+
+  &__name {
+    @extend %roboto-500;
+    font-size: 20px;
+    font-weight: 1.2;
+    text-transform: uppercase;
+    margin-bottom: 36px;
+  }
+
+  &__text {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 56px;
+  }
+
+  &__redirection {
+    padding: 18px 37px;
+    text-transform: uppercase;
+    color: $bg;
+    border: 2px solid $blue;
+    border-radius: 8px;
+    background-color: $blue;
+    transition: background-color 0.5s, color 0.3s;
+
+    &:not(:last-child) {
+      margin-right: 26px;
+    }
+
+    @include desktop {
+      &:hover {
+        color: $blue;
+        background-color: $bg;
+      }
+    }
+
+    &--bg {
+      padding: 16px 50px 16px;
+      font-size: 18px;
+      color: $blue;
+      background-color: $bg;
+
+      @include desktop {
+        &:hover {
+          color: $bg;
+          background-color: $blue;
+        }
+      }
+    }
+  }
+
+  &__image {
+    padding: 103px 119px;
+    background-color: rgba($bg-medium, 0.1);
+  }
+
+  &__img {
+    max-width: 250px;
+  }
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  position: relative;
+
+  @include r(768) {
+    display: block;
+    position: fixed;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding-top: 90px;
+    text-align: center;
+    background-color: $text;
+    transition: all 0.3s ease 0s;
+    overflow: auto;
+    z-index: 3;
+
+    &--active {
+      top: 0;
+    }
+  }
+
+  @include r(576) {
+    padding-top: 60px;
+  }
+
+  &__item {
+    @extend %opsans-600;
+
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+
+    &:last-child {
+      margin-left: 40px;
+    }
+
+  }
+
+  &__link {
+    text-decoration-color: transparent;
+    transition: text-decoration-color 0.5s, color 0.3s;
+
+    @include desktop {
+      &:hover {
+        color: $blue;
+        text-decoration: underline $blue;
+      }
+    }
+
+    @include r(768) {
+      display: block;
+      padding: 20px 0;
+      transition: ease-in-out 0s;
+    }
+
+    &--receive {
+      padding: 13px 28px;
+      @extend %opsans-700;
+      border: 2px solid $blue;
+      border-radius: 8px;
+      color: $blue;
+      text-decoration: none;
+      cursor: pointer;
+      transition: background-color 0.5s, color 0.3s;
+
+      @include desktop {
+        &:hover {
+          color: $bg;
+          background-color: $blue;
+          text-decoration-color: transparent;
+        }
+      }
+
+      // @include r(768) {
+      //     padding-top: 60px;
+      // }
+    }
+  }
+
+
+}
+
+.burger {
+  display: none;
+
+  @include r(768) {
+    display: block;
+    position: relative;
+    width: 30px;
+    height: 20px;
+    z-index: 4;
+
+    &:before,
+    &:after {
+      content: '';
+      background-color: $title;
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      left: 0;
+      transition: transform 0.3s;
+    }
+
+    &:before {
+      top: 0;
+    }
+
+    &:after {
+      bottom: 0;
+    }
+
+    &--active {
+      &:before {
+        transform: rotate(45deg);
+        top: 9px;
+      }
+
+      &:after {
+        transform: rotate(-45deg);
+        bottom: 9px;
+      }
+
+      .burger {
+        &__line {
+          transform: scale(0);
+        }
+      }
+    }
+  }
+
+  &__line {
+    position: absolute;
+    background-color: $title;
+    width: 100%;
+    height: 2px;
+    left: 0;
+    top: 9px;
+    transition: transform 0.3s;
+  }
+}
