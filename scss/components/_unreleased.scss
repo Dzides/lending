@@ -69,12 +69,11 @@
 
      &--prev {
        right: 0;
-
+       transform: translateX(-135%);
      }
 
      &--next {
        right: 0;
-       transform: translateX(-135%);
      }
    }
  }

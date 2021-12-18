@@ -672,10 +672,10 @@ body {
   background-position: center;
 }
 .category__button--prev {
-  right: -28px;
+  left: -28px;
 }
 .category__button--next {
-  left: -28px;
+  right: -28px;
 }
 
 .unreleased {
@@ -743,9 +743,9 @@ body {
 }
 .unreleased__button--prev {
   right: 0;
+  -webkit-transform: translateX(-135%);
+          transform: translateX(-135%);
 }
 .unreleased__button--next {
   right: 0;
-  -webkit-transform: translateX(-135%);
-          transform: translateX(-135%);
 }/*# sourceMappingURL=style.css.map */
