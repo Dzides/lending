@@ -1,0 +1,72 @@
+.newsletter {
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 62px 83px 60px;
+    border-radius: 12px;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  &__title {
+    max-width: 400px;
+    @extend %rcbold-700;
+    font-size: 36px;
+    line-height: 1.3;
+    color: $bg;
+  }
+
+  &__subscribe {
+    position: relative;
+    width: 447px;
+
+    svg {
+      position: absolute;
+      width: 16px;
+      height: 18px;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 20px;
+      fill: $title;
+    }
+  }
+
+  &__input {
+    position: relative;
+    padding: 17px 140px 17px 48px;
+    max-width: 100%;
+    width: 100%;
+    color: $grey;
+    border-radius: 8px;
+    @extend %opsans-600;
+    overflow: hidden;
+    transition: color 0.3s;
+
+    &:focus-visible {
+      color: $black;
+    }
+  }
+
+  &__button {
+    position: absolute;
+    padding: 13px 28px;
+    @extend %opsans-700;
+    color: $bg;
+    background-color: $orange-title;
+    border-radius: 4px;
+    right: 4px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: background-color 0.3s;
+
+    @include desktop {
+      &:hover {
+        background-color: $blue;
+      }
+    }
+  }
+}

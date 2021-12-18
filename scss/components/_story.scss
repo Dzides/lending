@@ -1,0 +1,124 @@
+.story {
+  padding: 104px 0 100px;
+
+  &__wrapper {
+    max-width: 1035px;
+    padding: 0 15px;
+    margin: 0 auto;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+
+  &__text {
+    font-size: 18px;
+    line-height: 1.8;
+    max-width: 380px;
+    margin-right: 35px;
+  }
+}
+
+.video {
+  &__link {
+
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 380px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+    margin-bottom: 30px;
+
+
+    @include desktop {
+      &:hover {
+        svg {
+          fill: $bg;
+        }
+
+        .video__button--circle:before {
+          background-color: $blue;
+        }
+      }
+    }
+  }
+
+  svg {
+    fill: $blue;
+    transition: fill 0.3s;
+  }
+
+  &__button {
+    position: absolute;
+    width: 30px;
+    height: 39px;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+
+    &--circle {
+      &:before {
+        content: '';
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        top: 45%;
+        right: 60%;
+        transform: translate(50%, -50%);
+        background-color: $bg;
+        border-radius: 50%;
+        z-index: -1;
+        transition: background-color 0.3s;
+      }
+    }
+  }
+
+  &__items {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__item {
+    position: relative;
+    max-width: 315px;
+    width: 100%;
+
+
+    @include desktop {
+      &:hover {
+        svg {
+          fill: $blue;
+        }
+      }
+    }
+
+    svg {
+      fill: $bg;
+      transition: fill 0.3s;
+    }
+  }
+
+  &__story {
+    display: block;
+    height: 200px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+  }
+
+  &__btn {}
+
+  &__inner {
+    svg {
+      fill: $blue;
+    }
+  }
+
+}

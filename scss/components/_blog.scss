@@ -1,0 +1,129 @@
+.blog {
+  padding: 100px 0;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+  }
+
+  &__link {
+    padding: 12px 17px;
+    color: $blue;
+    @extend %rcbold-700;
+    line-height: 1.25;
+    letter-spacing: 0.2px;
+    border: 2px solid $blue;
+    border-radius: 22px;
+    transition: color 0.3s, background-color 0.3s;
+
+    @include desktop {
+      &:hover {
+        background-color: $blue;
+        color: $bg;
+      }
+    }
+  }
+
+  &__all {
+    display: block;
+    width: 145px;
+    text-align: center;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__hero {
+    max-width: 556px;
+    width: 100%;
+    margin-right: 30px;
+  }
+
+  &__image {
+    height: 330px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+  }
+
+  &__subtitle {
+    @extend %rcbold-700;
+    font-size: 24px;
+    line-height: 1.35;
+    margin-bottom: 16px;
+  }
+
+  &__text {
+    font-size: 18px;
+    line-height: 1.8;
+    color: $text;
+  }
+
+  &__reviews {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__review {
+    display: flex;
+
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__img {
+    max-width: 250px;
+    width: 100%;
+    height: 150px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    border-radius: 8px;
+    margin-right: 36px;
+  }
+
+  &__wrap {
+    padding: 0 10px;
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__date {
+    font-size: 14px;
+    color: $text;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+
+  &__name {
+    @extend %roboto-500;
+    font-size: 22px;
+    letter-spacing: 0.2px;
+    margin-bottom: 18px;
+  }
+
+  &__read {
+    @extend %rcbold-700;
+    text-transform: uppercase;
+    color: $blue;
+    text-decoration-color: transparent;
+    transition: text-decoration-color 0.5s;
+
+    @include desktop {
+      &:hover {
+        text-decoration: underline $blue;
+      }
+    }
+  }
+}
