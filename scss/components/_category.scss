@@ -1,0 +1,88 @@
+ .category {
+   padding: 57px 0 95px;
+
+   &__wrapper {
+     position: relative;
+   }
+
+   &__item {
+     max-width: 265px;
+     padding: 40px 10px 30px;
+     border: 1px solid $brd-card;
+     border-radius: 8px;
+   }
+
+   &__content {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+   }
+
+   &__image {
+     width: 64px;
+     height: 64px;
+     margin-bottom: 40px;
+   }
+
+   &__title {
+     @extend %roboto-500;
+     font-size: 22px;
+     line-height: 1.45;
+     margin-bottom: 12px;
+   }
+
+   &__subtitle {
+     color: $text;
+   }
+
+   &__button {
+     position: absolute;
+     content: "";
+     width: 56px;
+     height: 56px;
+     top: 50%;
+     transform: translateY(-50%);
+     background-color: $bg;
+     box-shadow: 0px 12px 16px rgba($black, 0.08);
+     border-radius: 50%;
+     transition: background-color 0.3s;
+     z-index: 2;
+
+     @include desktop {
+       &:hover {
+         background-color: $text;
+
+         svg {
+           fill: $bg;
+         }
+       }
+     }
+
+     svg {
+       fill: $title;
+       transition: fill 0.3s;
+     }
+
+     &:before {
+       position: absolute;
+       content: "";
+       width: 16px;
+       height: 14px;
+       left: 50%;
+       top: 50%;
+       transform: translate(-50%, -50%);
+       z-index: 1;
+       background-size: cover;
+       background-repeat: no-repeat;
+       background-position: center;
+     }
+
+     &--prev {
+       right: -28px;
+     }
+
+     &--next {
+       left: -28px;
+     }
+   }
+ }

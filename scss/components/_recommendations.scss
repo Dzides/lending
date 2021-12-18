@@ -33,7 +33,15 @@
     color: $blue;
     background-color: rgba($blue, 0.1);
     border-radius: 8px;
-    
+    transition: background-color 0.5s, color 0.3s;
+
+    @include desktop {
+      &:hover {
+        color: $bg;
+        background-color: $blue;
+      }
+    }
+
   }
 }
 
@@ -91,11 +99,30 @@
     @extend %opsans-700;
     color: $bg;
     background-color: $title;
+    border: 1px solid $title;
     border-radius: 50px;
+    transition: background-color 0.5s, color 0.3s;
+
+    @include desktop {
+      &:hover {
+        color: $title;
+        background-color: $bg;
+      }
+    }
   }
 
   &__btn {
     line-height: 1;
+
+    svg {
+      fill: $grey;
+    }
+
+    &--active {
+      svg {
+        fill: $orange-title;
+      }
+    }
   }
 }
 
@@ -131,13 +158,23 @@
   }
 
   &__button {
+    display: block;
     padding: 30px 20px 27px;
     width: 100%;
+    text-align: center;
     @extend %rcbold-700;
     line-height: 1.25;
     text-transform: uppercase;
     color: $blue;
     border-top: 1px solid $brd-card;
+    text-decoration-color: transparent;
+    transition: text-decoration-color 0.5s;
+
+    @include desktop {
+      &:hover {
+        text-decoration: underline $blue;
+      }
+    }
   }
 
 }

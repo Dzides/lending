@@ -1,0 +1,80 @@
+ .unreleased {
+   padding: 62px 0 80px;
+   background-color: $title;
+
+   &__wrapper {
+     position: relative;
+   }
+
+   &__title {
+     @extend %rcbold-700;
+     font-size: 36px;
+     line-height: 1.35;
+     margin-bottom: 60px;
+     color: $bg;
+   }
+
+   &__item {
+     max-width: 200px;
+     height: 300px;
+     border-radius: 8px;
+     background-size: cover;
+     background-repeat: no-repeat;
+     background-position: center;
+     overflow: hidden;
+   }
+
+   &__image {
+     width: 100%;
+     height: 100%;
+   }
+
+   &__button {
+     position: absolute;
+     content: "";
+     width: 56px;
+     height: 56px;
+     top: 0;
+     background-color: transparent;
+     border: 2px solid $bg;
+     border-radius: 50%;
+     transition: border-color 0.3s;
+     z-index: 2;
+
+     @include desktop {
+       &:hover {
+         border-color: $text;
+
+         svg {
+           fill: $text;
+         }
+       }
+     }
+
+     svg {
+       fill: $bg;
+       transition: fill 0.3s;
+     }
+
+     &:before {
+       position: absolute;
+       content: "";
+       width: 16px;
+       height: 14px;
+       left: 50%;
+       top: 50%;
+       transform: translate(-50%, -50%);
+       z-index: 1;
+     }
+
+     &--prev {
+       right: 0;
+
+     }
+
+     &--next {
+       right: 0;
+       transform: translateX(-135%);
+     }
+   }
+ }
