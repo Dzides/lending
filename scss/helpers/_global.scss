@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     @extend %opsans-400;
     font-size: 16px;
@@ -37,4 +41,45 @@ body {
     @extend %rcbold-700;
     font-size: 48px;
     line-height: 1.25;
+}
+
+.go-back {
+    display: none;
+    color: $blue;
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    padding: 20px;
+    position: fixed;
+    z-index: 10;
+    bottom: 20px;
+    right: 20px;
+    transition: background-color .5s;
+    cursor: pointer;
+}
+
+polygon {
+    fill: $bg;
+}
+
+polygon:hover {
+    fill: $text;
+}
+
+.animate {
+    background-color: rgba($text, 0.5);
+    display: block;
+}
+
+.invalid {
+    color: $orange-title;
+}
+
+.lock {
+    overflow: hidden;
+}
+
+.header__top--animate ~ .burger--active {
+    opacity: 1;
 }

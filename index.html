@@ -9,18 +9,19 @@
   <title>Дизайн студия | EHYA</title>
   <link rel="stylesheet" href="css/swiper-bundle.min.css">
   <link rel="stylesheet" href="css/jquery.fancybox.min.css">
+  <link rel="stylesheet" href="css/aos.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
   <a class="go-back" id="go-back" href="#home">
-    <!-- <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+    <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
       <title>arrow-up-glyph</title>
       <polygon points="255.99 0 50.32 267.47 180.4 267.47 180.4 512 331.61 512 331.61 267.47 461.68 267.47 255.99 0" fill="#5b5b5f" />
-    </svg> -->
+    </svg>
   </a>
 
-  <!-- <header class="header">
+  <header class="header" id="home">
     <div class="container">
 
       <div class="header__top">
@@ -41,25 +42,25 @@
           <ul class="menu">
 
             <li class="menu__item">
-              <a href="" class="menu__link">
+              <a href="#recomend" class="menu__link">
                 Рекомендации
               </a>
             </li>
 
             <li class="menu__item">
-              <a href="" class="menu__link">
+              <a href="#unreleased" class="menu__link">
                 Книги
               </a>
             </li>
 
             <li class="menu__item">
-              <a href="" class="menu__link">
+              <a href="#blog" class="menu__link">
                 Блог
               </a>
             </li>
 
             <li class="menu__item">
-              <a class="menu__link menu__link--receive" href="#">
+              <a class="menu__link menu__link--receive" data-toggle="modal" href="#">
                 Получить
               </a>
             </li>
@@ -105,11 +106,12 @@
       </div>
 
     </div>
-  </header> -->
+
+  </header>
 
   <main class="main">
 
-    <!-- <section class="recommendations">
+    <section class="recommendations" id="recomend">
       <div class="container">
 
         <div class="recommendations__wrapper">
@@ -448,7 +450,7 @@
         </div>
 
       </div>
-    </section> -->
+    </section>
 
     <!-- <div class="strip">
       <div class="container">
@@ -531,7 +533,7 @@
       </div>
     </section> -->
 
-    <!-- <section class="unreleased">
+    <section class="unreleased" id="unreleased">
       <div class="container">
         <div class="unreleased__wrapper">
 
@@ -591,9 +593,9 @@
 
         </div>
       </div>
-    </section> -->
+    </section>
 
-    <section class="story">
+    <!-- <section class="story">
       <div class="container">
         <div class="story__wrapper video">
 
@@ -609,28 +611,23 @@
 
           <a class="video__link" href="https://www.youtube.com/watch?v=umEYETq75Qg" data-fancybox="" style="background-image: url(img/story/bitmap-1.jpg);">
             <span class="sr-only">Посмотреть историю автора</span>
-          </a>
-          <button class="video__button video__button--circle">
-            <span class="sr-only">Запустить просмотр видео</span>
             <svg width="31" height="37" viewBox="0 0 31 37" xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M28.2812 15.5273L4.90625 1.71484C2.98047 0.585938 0.125 1.71484 0.125 4.4375V32.0625C0.125 34.5859 2.78125 36.1133 4.90625 34.8516L28.2812 21.0391C30.3398 19.7773 30.3398 16.7891 28.2812 15.5273Z" />
             </svg>
-          </button>
+          </a>
 
           <ul class="video__items">
             <li class="video__item">
               <a class="video__story" href="https://www.youtube.com/watch?v=umEYETq75Qg" data-fancybox="" style="background-image: url(img/story/bitmap-2.jpg);">
                 <span class="sr-only">Посмотреть историю автора</span>
-              </a>
-              <button class="video__btn">
-                <span class="sr-only">Запустить просмотр видео</span>
                 <svg width="31" height="37" viewBox="0 0 31 37" xmlns="http://www.w3.org/2000/svg">
                   <path
                     d="M28.2812 15.5273L4.90625 1.71484C2.98047 0.585938 0.125 1.71484 0.125 4.4375V32.0625C0.125 34.5859 2.78125 36.1133 4.90625 34.8516L28.2812 21.0391C30.3398 19.7773 30.3398 16.7891 28.2812 15.5273Z" />
                 </svg>
-              </button>
-              <div class="video__inner">
+              </a>
+
+              <div class="video__list">
                 <h3 class="video__name">
                   Emelda Scandroot
                 </h3>
@@ -642,20 +639,18 @@
                   Author of Books Tittle
                 </span>
               </div>
-
             </li>
+
             <li class="video__item">
               <a class="video__story" href="https://www.youtube.com/watch?v=umEYETq75Qg" data-fancybox="" style="background-image: url(img/story/bitmap-3.jpg);">
                 <span class="sr-only">Посмотреть историю автора</span>
-              </a>
-              <button class="video__btn">
-                <span class="sr-only">Запустить просмотр видео</span>
                 <svg width="31" height="37" viewBox="0 0 31 37" xmlns="http://www.w3.org/2000/svg">
                   <path
                     d="M28.2812 15.5273L4.90625 1.71484C2.98047 0.585938 0.125 1.71484 0.125 4.4375V32.0625C0.125 34.5859 2.78125 36.1133 4.90625 34.8516L28.2812 21.0391C30.3398 19.7773 30.3398 16.7891 28.2812 15.5273Z" />
                 </svg>
-              </button>
-              <div class="video__inner">
+              </a>
+
+              <div class="video__list">
                 <h3 class="video__name">
                   Mar Rueda
                 </h3>
@@ -672,15 +667,12 @@
             <li class="video__item">
               <a class="video__story" href="https://www.youtube.com/watch?v=umEYETq75Qg" data-fancybox="" style="background-image: url(img/story/bitmap-4.jpg);">
                 <span class="sr-only">Посмотреть историю автора</span>
-              </a>
-              <button class="video__btn">
-                <span class="sr-only">Запустить просмотр видео</span>
                 <svg width="31" height="37" viewBox="0 0 31 37" xmlns="http://www.w3.org/2000/svg">
                   <path
                     d="M28.2812 15.5273L4.90625 1.71484C2.98047 0.585938 0.125 1.71484 0.125 4.4375V32.0625C0.125 34.5859 2.78125 36.1133 4.90625 34.8516L28.2812 21.0391C30.3398 19.7773 30.3398 16.7891 28.2812 15.5273Z" />
                 </svg>
-              </button>
-              <div class="video__inner">
+              </a>
+              <div class="video__list">
                 <h3 class="video__name">
                   Nembo Lukeni
                 </h3>
@@ -697,9 +689,9 @@
 
         </div>
       </div>
-    </section>
+    </section> -->
 
-    <section class="partners">
+    <!-- <section class="partners">
       <div class="container">
 
         <h2 class="sr-only">
@@ -752,9 +744,9 @@
         </ul>
 
       </div>
-    </section>
+    </section> -->
 
-    <section class="blog">
+    <section class="blog" id="blog">
       <div class="container">
 
         <div class="blog__header">
@@ -840,14 +832,14 @@
       </div>
     </section>
 
-    <section class="newsletter">
+    <!-- <section class="newsletter">
       <div class="container">
-        <div class="newsletter__wrapper" style="background-image: url(../img/newsletter/newsletter-bg.jpg);">
+        <div class="newsletter__wrapper" style="background-image: url(img/newsletter/newsletter-bg.jpg);">
           <h2 class="newsletter__title">
             Будь первым, кто узнает о наших акциях
           </h2>
           <div class="newsletter__inner">
-            <form class="newsletter__subscribe" action="agreement.php" method="post">
+            <form class="newsletter__subscribe control" action="agreement.php" method="post">
               <input class="newsletter__input" type="email" name="email" placeholder="Ваш Emaill" required>
               <svg width="16" height="12" viewBox="0 0 16 12" xmlns="http://www.w3.org/2000/svg">
                 <path
@@ -860,11 +852,11 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
 
   </main>
 
-  <footer class="footer">
+  <!-- <footer class="footer">
     <div class="container">
 
       <div class="footer__top">
@@ -924,23 +916,23 @@
         <ul class="footer__item">
 
           <li class="footer__title">
-            Продукт
+              Продукт
           </li>
 
           <li class="footer__link">
-            Лэндинг
+            <a href="#">Лэндинг</a>
           </li>
           <li class="footer__link">
-            Функции
+            <a href="#">Функции</a>
           </li>
           <li class="footer__link">
-            Документация
+            <a href="#">Документация</a>
           </li>
           <li class="footer__link">
-            Скидки
+            <a href="#">Скидки</a>
           </li>
           <li class="footer__link">
-            Расценки
+            <a href="#">Расценки</a>
           </li>
 
         </ul>
@@ -952,19 +944,19 @@
           </li>
 
           <li class="footer__link">
-            Документация
+            <a href="#">Документация</a>
           </li>
           <li class="footer__link">
-            Дизайн
+            <a href="#">Дизайн</a>
           </li>
           <li class="footer__link">
-            Темы
+            <a href="#">Темы</a>
           </li>
           <li class="footer__link">
-            Илюстрации
+            <a href="#">Илюстрации</a>
           </li>
           <li class="footer__link">
-            UI Kit
+            <a href="#">UI Kit</a>
           </li>
 
         </ul>
@@ -976,16 +968,16 @@
           </li>
 
           <li class="footer__link">
-            О нас
+            <a href="#">О нас</a>
           </li>
           <li class="footer__link">
-            Условия
+            <a href="#">Условия</a>
           </li>
           <li class="footer__link">
-            Privacy Policy
+            <a href="#">Privacy Policy</a>
           </li>
           <li class="footer__link">
-            Careers
+            <a href="#">Careers</a>
           </li>
 
         </ul>
@@ -997,13 +989,13 @@
           </li>
 
           <li class="footer__link">
-            Документация
+            <a href="#">Документация</a>
           </li>
           <li class="footer__link">
-            Лицензия
+            <a href="#">Лицензия</a>
           </li>
           <li class="footer__link">
-            Изменения
+            <a href="#">Изменения</a>
           </li>
 
         </ul>
@@ -1023,11 +1015,43 @@
       </div>
 
     </div>
-  </footer>
+  </footer> -->
+
+  <div class="modal">
+
+    <div class="modal__overlay">
+
+      <div class="modal__dialog">
+
+        <a href="#" class="modal__close">
+          <img src="img/svg/close.svg" width="16" height="16" alt="Icon: close">
+        </a>
+        <h3 class="modal__title">
+          Заказать книгу
+        </h3>
+        <form class="modal__form control" action="send.php" method="post">
+          <input class="modal__input" type="text" name="name" placeholder="Ваше имя*" required minlength="2">
+          <input class="modal__input" type="email" name="email" placeholder="Ваша почта*" required>
+          <textarea class="modal__message" name="message" placeholder="Какие книги хотите заказть?"></textarea>
+          <div class="modal__inner">
+            <button class="modal__button" type="submit">Отправить</button>
+            <span class="modal__info">Нажимая отправить вы даете согласие на обработку персональных данный</span>
+          </div>
+        </form>
+
+      </div>
+
+    </div>
+
+  </div>
 
   <script src="js/jquery-3.6.0.min.js"></script>
   <script src="js/swiper-bundle.min.js"></script>
   <script src="js/jquery.fancybox.min.js"></script>
+  <script src="js/jquery.validate.min.js"></script>
+  <script src="js/jquery.mask.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/blazy.min.js"></script>
   <script src="js/main.js"></script>
 
 </body>

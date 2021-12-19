@@ -30,9 +30,9 @@ $(function () {
 
    $(window).scroll(function () {
       if ($(document).scrollTop() > 100) {
-         $(".header__nav").addClass("header__nav--animate");
+         $(".header__top").addClass("header__top--animate");
       } else {
-         $(".header__nav").removeClass("header__nav--animate");
+         $(".header__top").removeClass("header__top--animate");
       }
    });
 
@@ -58,4 +58,77 @@ $(function () {
       },
 
    });
+
+   $(window).scroll(function () {
+      if ($(document).scrollTop() > 100) {
+         $(".go-back").addClass("animate");
+      } else {
+         $(".go-back").removeClass("animate");
+      }
+   });
+
+   $('.go-back').on('click', function (e) {
+      e.preventDefault();
+      var id = $(this).attr('href'),
+         top = $(id).offset().top;
+      $('body,html').animate({
+         scrollTop: top
+      }, 1500);
+   });
+
+      var modalButton = $("[data-toggle=modal]");
+      var closeModalButton = $(".modal__close");
+      modalButton.on("click", openModal);
+      closeModalButton.on("click", closeModal);
+
+      function openModal() {
+         var modalOverlay = $(".modal__overlay");
+         var modalDialog = $(".modal__dialog");
+         modalOverlay.addClass("modal__overlay--visible");
+         modalDialog.addClass("modal__dialog--visible");
+      }
+
+      function closeModal() {
+         event.preventDefault();
+         var modalOverlay = $(".modal__overlay");
+         var modalDialog = $(".modal__dialog");
+         modalOverlay.removeClass("modal__overlay--visible");
+         modalDialog.removeClass("modal__dialog--visible");
+      }
+
+
+      $(document).keydown(function (e) {
+         if (e.keyCode == 27) {
+            var modalOverlay = $(".modal__overlay");
+            var modalDialog = $(".modal__dialog");
+            modalOverlay.removeClass("modal__overlay--visible");
+            modalDialog.removeClass("modal__dialog--visible");
+         }
+      });
+
+      $(".control").each(function () {
+         $(this).validate({
+            errorClass: "invalid",
+            messages: {
+               name: {
+                  required: "Пожалуйста введите Ваше имя",
+                  minlength: "Имя должно состоять не менее чем из 2 символов",
+               },
+               email: {
+                  required: "Пожалуйста введите Вашу почту",
+                  email: "Ваш адрес почты должен быть в формате name@domain.com",
+               },
+            },
+         });
+      });
+
+      $('.phone').mask('+7 (000) 000-00-00');
+
+      AOS.init({
+         disable: function () {
+            let maxWidth = 1000;
+            return window.innerWidth < maxWidth;
+         },
+      });
+      var bLazy = new Blazy();
 });

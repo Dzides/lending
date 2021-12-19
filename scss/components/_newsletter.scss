@@ -20,9 +20,14 @@
     color: $bg;
   }
 
+  &__inner {
+    position: relative;
+  }
+
   &__subscribe {
     position: relative;
     width: 447px;
+    height: 55px;
 
     svg {
       position: absolute;
@@ -36,7 +41,6 @@
   }
 
   &__input {
-    position: relative;
     padding: 17px 140px 17px 48px;
     max-width: 100%;
     width: 100%;

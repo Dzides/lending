@@ -1,0 +1,40 @@
+.agreement {
+  padding-top: 200px; 
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    padding: 100px 100px;
+    border-radius: 12px;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  &__title {
+    max-width: 400px;
+    @extend %rcbold-700;
+    font-size: 36px;
+    line-height: 1.3;
+    color: $bg;
+    margin-right: 200px;
+  }
+
+  &__button {
+    width: 300px;
+    text-align: center;
+    padding: 13px 28px;
+    @extend %opsans-700;
+    color: $bg;
+    background-color: $orange-title;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+
+    @include desktop {
+      &:hover {
+        background-color: $bg;
+        color: $blue;
+      }
+    }
+  }
+}
