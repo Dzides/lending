@@ -1,18 +1,43 @@
 .recommendations {
   padding: 100px 0 80px;
 
+  @include r(576) {
+    padding: 55px 0 80px;
+  }
+
   &__title {
     @extend %rcbold-700;
     font-size: 32px;
     line-height: 1.25;
     letter-spacing: 0.2px;
     margin-bottom: 30px;
+
+    @include r(992) {
+      text-align: center;
+    }
+
+    @include r(576) {
+      font-size: 28px;
+    }
   }
 
   &__wrapper {
     display: flex;
-
     justify-content: space-between;
+
+    @include r(992) {
+      flex-direction: column;
+    }
+  }
+
+  &__inner {
+    @include r(992) {
+      margin-bottom: 50px;
+    }
+
+    @include r(576) {
+      margin-bottom: 58px;
+    }
   }
 
   &__cards {
@@ -22,6 +47,22 @@
     grid-column-gap: 35px;
     grid-row-gap: 28px;
     margin-bottom: 24px;
+
+    @include r(1200) {
+      grid-column-gap: 5px;
+      grid-row-gap: 5px;
+      margin-right: 10px;
+    }
+
+    @include r(992) {
+      display: flex;
+      flex-wrap: wrap;
+      grid-column-gap: 35px;
+      grid-row-gap: 35px;
+      margin-right: 0;
+      justify-content: space-around;
+    }
+
   }
 
   &__button {
@@ -42,6 +83,21 @@
       }
     }
 
+    @include r(576) {
+      padding: 14px 61px;
+      font-size: 16px;
+      text-transform: none;
+    }
+
+
+  }
+
+  &__item {
+    @include r(576) {
+      &:not(:first-child) {
+        display: none;
+      }
+    }
   }
 }
 
@@ -52,6 +108,11 @@
   border: 1px solid $brd-card;
   border-radius: 8px;
 
+  @include r(576) {
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+
   &__img {
     margin-right: 20px;
     max-width: 160px;
@@ -60,6 +121,13 @@
     border-radius: 8px;
     background-color: $bg-medium;
     overflow: hidden;
+
+    @include r(576) {
+      margin: 0 auto;
+      width: 95px;
+      height: 146px;
+      margin-bottom: 15px;
+    }
   }
 
   &__content {
@@ -67,6 +135,14 @@
     flex-direction: column;
     justify-content: center;
     width: 100%;
+
+    @include r(576) {
+      text-align: center;
+    }
+
+    &--start {
+      text-align: left;
+    }
   }
 
   &__title {
@@ -74,10 +150,26 @@
     font-size: 22px;
     line-height: 1.45;
     margin-bottom: 16px;
+
+    @include r(576) {
+      font-size: 20px;
+      margin-bottom: 8px;
+    }
+
+    &--fsz {
+      font-size: 16px;
+      margin-bottom: 12px;
+    }
+
   }
 
   &__subtitle {
     margin-bottom: 24px;
+
+    @include r(576) {
+      font-size: 14px;
+      margin-bottom: 15px;
+    }
   }
 
   &__price {
@@ -86,11 +178,24 @@
     line-height: 1.2;
     color: $blue;
     margin-bottom: 24px;
+
+    @include r(576) {
+      font-size: 14px;
+    }
+
+    &--fsz {
+      font-size: 20px;
+      margin-bottom: 12px;
+    }
   }
 
   &__inner {
     display: flex;
     align-items: center;
+
+    @include r(576) {
+      justify-content: center;
+    }
   }
 
   &__link {
@@ -133,6 +238,24 @@
     width: 100%;
     background-color: rgba($bg-medium, 0.1);
     border-radius: 8px;
+
+    @include r(992) {
+      max-width: 100%;
+    }
+  }
+
+  &__items {
+    @include r(992) {
+      display: flex;
+      flex-wrap: wrap;
+      grid-column-gap: 30px;
+      grid-row-gap: 30px;
+      justify-content: space-between;
+    }
+
+    @include r(768) {
+      justify-content: center;
+    }
   }
 
   &__item {
@@ -143,11 +266,19 @@
     &:last-child {
       margin-bottom: 20px;
     }
+
+    @include r(992) {
+      max-width: 300px;
+      width: 100%;
+    }
+
+    @include r(768) {
+      max-width: 400px;
+    }
   }
 
   &__card {
     display: flex;
-
   }
 
   &__img {
@@ -155,6 +286,12 @@
     width: 100%;
     height: 182px;
     margin-right: 27px;
+
+    @include r(576) {
+      max-width: 96px;
+      height: 145px;
+      margin-right: 10px;
+    }
   }
 
   &__button {

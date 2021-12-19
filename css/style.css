@@ -664,11 +664,26 @@ polygon:hover {
 .recommendations {
   padding: 100px 0 80px;
 }
+@media only screen and (max-width: 576px) {
+  .recommendations {
+    padding: 55px 0 80px;
+  }
+}
 .recommendations__title {
   font-size: 32px;
   line-height: 1.25;
   letter-spacing: 0.2px;
   margin-bottom: 30px;
+}
+@media only screen and (max-width: 992px) {
+  .recommendations__title {
+    text-align: center;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .recommendations__title {
+    font-size: 28px;
+  }
 }
 .recommendations__wrapper {
   display: -webkit-box;
@@ -678,6 +693,24 @@ polygon:hover {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
+@media only screen and (max-width: 992px) {
+  .recommendations__wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+@media only screen and (max-width: 992px) {
+  .recommendations__inner {
+    margin-bottom: 50px;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .recommendations__inner {
+    margin-bottom: 58px;
+  }
+}
 .recommendations__cards {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -685,6 +718,27 @@ polygon:hover {
   grid-column-gap: 35px;
   grid-row-gap: 28px;
   margin-bottom: 24px;
+}
+@media only screen and (max-width: 1200px) {
+  .recommendations__cards {
+    grid-column-gap: 5px;
+    grid-row-gap: 5px;
+    margin-right: 10px;
+  }
+}
+@media only screen and (max-width: 992px) {
+  .recommendations__cards {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    grid-column-gap: 35px;
+    grid-row-gap: 35px;
+    margin-right: 0;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
 }
 .recommendations__button {
   padding: 25px 20px 27px;
@@ -703,6 +757,18 @@ polygon:hover {
     background-color: #1565D8;
   }
 }
+@media only screen and (max-width: 576px) {
+  .recommendations__button {
+    padding: 14px 61px;
+    font-size: 16px;
+    text-transform: none;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .recommendations__item:not(:first-child) {
+    display: none;
+  }
+}
 
 .card {
   display: -webkit-box;
@@ -713,6 +779,15 @@ polygon:hover {
   border: 1px solid #ECEEF2;
   border-radius: 8px;
 }
+@media only screen and (max-width: 576px) {
+  .card {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-bottom: 20px;
+  }
+}
 .card__img {
   margin-right: 20px;
   max-width: 160px;
@@ -721,6 +796,14 @@ polygon:hover {
   border-radius: 8px;
   background-color: #B3BAC5;
   overflow: hidden;
+}
+@media only screen and (max-width: 576px) {
+  .card__img {
+    margin: 0 auto;
+    width: 95px;
+    height: 146px;
+    margin-bottom: 15px;
+  }
 }
 .card__content {
   display: -webkit-box;
@@ -735,19 +818,52 @@ polygon:hover {
           justify-content: center;
   width: 100%;
 }
+@media only screen and (max-width: 576px) {
+  .card__content {
+    text-align: center;
+  }
+}
+.card__content--start {
+  text-align: left;
+}
 .card__title {
   font-size: 22px;
   line-height: 1.45;
   margin-bottom: 16px;
 }
+@media only screen and (max-width: 576px) {
+  .card__title {
+    font-size: 20px;
+    margin-bottom: 8px;
+  }
+}
+.card__title--fsz {
+  font-size: 16px;
+  margin-bottom: 12px;
+}
 .card__subtitle {
   margin-bottom: 24px;
+}
+@media only screen and (max-width: 576px) {
+  .card__subtitle {
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
 }
 .card__price {
   font-size: 20px;
   line-height: 1.2;
   color: #1565D8;
   margin-bottom: 24px;
+}
+@media only screen and (max-width: 576px) {
+  .card__price {
+    font-size: 14px;
+  }
+}
+.card__price--fsz {
+  font-size: 20px;
+  margin-bottom: 12px;
 }
 .card__inner {
   display: -webkit-box;
@@ -756,6 +872,13 @@ polygon:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+@media only screen and (max-width: 576px) {
+  .card__inner {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 .card__link {
   padding: 7px 20px;
@@ -790,11 +913,48 @@ polygon:hover {
   background-color: rgba(179, 186, 197, 0.1);
   border-radius: 8px;
 }
+@media only screen and (max-width: 992px) {
+  .best__cards {
+    max-width: 100%;
+  }
+}
+@media only screen and (max-width: 992px) {
+  .best__items {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .best__items {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
 .best__item:not(:last-child) {
   margin-bottom: 31px;
 }
 .best__item:last-child {
   margin-bottom: 20px;
+}
+@media only screen and (max-width: 992px) {
+  .best__item {
+    max-width: 300px;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .best__item {
+    max-width: 400px;
+  }
 }
 .best__card {
   display: -webkit-box;
@@ -806,6 +966,13 @@ polygon:hover {
   width: 100%;
   height: 182px;
   margin-right: 27px;
+}
+@media only screen and (max-width: 576px) {
+  .best__img {
+    max-width: 96px;
+    height: 145px;
+    margin-right: 10px;
+  }
 }
 .best__button {
   display: block;

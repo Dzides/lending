@@ -36,10 +36,10 @@
 
     @include r(768) {
       max-width: 300px;
-    width: 100%;
+      width: 100%;
     }
 
-    
+
   }
 
   &__dialog--visible {
